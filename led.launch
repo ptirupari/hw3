@@ -1,0 +1,11 @@
+<launch>
+
+<include file="$(find tiny_keyboard_reader)/launch/keyboard_reader.launch" />
+<include file="$(find prizm_ros)/launch/led_sim.launch" />
+
+<param name="/abc" type="String" value="green" /> 
+
+<node name="led_control_node" pkg="my_ros_tutorials" type="led_control_node" 
+  output="screen" launch-prefix="gnome-terminal -e" />
+ 
+</launch>
